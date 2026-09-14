@@ -18,6 +18,7 @@ from app.gateway.routers import (
     auth,
     channel_connections,
     channels,
+    connectors,
     feedback,
     mcp,
     memory,
@@ -396,6 +397,9 @@ This gateway provides runtime endpoints for agent runs plus custom endpoints for
 
     # Auth API is mounted at /api/v1/auth
     app.include_router(auth.router)
+
+    # Connectors API is mounted at /api/connectors
+    app.include_router(connectors.router)
 
     # Feedback API is mounted at /api/threads/{thread_id}/runs/{run_id}/feedback
     app.include_router(feedback.router)

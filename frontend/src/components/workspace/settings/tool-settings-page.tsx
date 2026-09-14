@@ -14,6 +14,7 @@ import { useMCPConfig, useEnableMCPServer } from "@/core/mcp/hooks";
 import type { MCPServerConfig } from "@/core/mcp/types";
 import { env } from "@/env";
 
+import { MailConnectorCard } from "./mail-connector-card";
 import { SettingsSection } from "./settings-section";
 
 export function ToolSettingsPage() {
@@ -26,17 +27,22 @@ export function ToolSettingsPage() {
       title={t.settings.tools.title}
       description={t.settings.tools.description}
     >
-      {isLoading ? (
-        <div className="text-muted-foreground text-sm">{t.common.loading}</div>
-      ) : adminRequired ? (
-        <div className="text-muted-foreground text-sm">
-          {t.settings.tools.adminRequired}
-        </div>
-      ) : error ? (
-        <div>Error: {error.message}</div>
-      ) : (
-        config && <MCPServerList servers={config.mcp_servers} />
-      )}
+      <div className="flex w-full flex-col gap-4">
+        <MailConnectorCard />
+        {isLoading ? (
+          <div className="text-muted-foreground text-sm">
+            {t.common.loading}
+          </div>
+        ) : adminRequired ? (
+          <div className="text-muted-foreground text-sm">
+            {t.settings.tools.adminRequired}
+          </div>
+        ) : error ? (
+          <div>Error: {error.message}</div>
+        ) : (
+          config && <MCPServerList servers={config.mcp_servers} />
+        )}
+      </div>
     </SettingsSection>
   );
 }

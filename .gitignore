@@ -27,6 +27,7 @@ venv/
 config.yaml
 mcp_config.json
 extensions_config.json
+.extensions_config.json.lock
 
 # IDE
 .idea/
