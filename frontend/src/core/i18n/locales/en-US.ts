@@ -174,6 +174,7 @@ export const enUS: Translations = {
     recentChats: "Recent chats",
     demoChats: "Demo chats",
     agents: "Agents",
+    connectors: "Connectors",
   },
 
   // Agents
@@ -224,6 +225,16 @@ export const enUS: Translations = {
     agentCreated: "Agent created!",
     startChatting: "Start chatting",
     backToGallery: "Back to Gallery",
+  },
+
+  // Connectors
+  connectors: {
+    title: "Connectors",
+    description:
+      "Manage connectors to external services such as email and knowledge bases. Authorize them to use within conversations.",
+    emptyTitle: "No connectors available",
+    emptyDescription:
+      "No connectors are installed yet. Please contact your administrator.",
   },
 
   // Breadcrumb

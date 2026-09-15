@@ -117,6 +117,7 @@ export interface Translations {
     chats: string;
     demoChats: string;
     agents: string;
+    connectors: string;
     channels: string;
   };
 
@@ -155,6 +156,14 @@ export interface Translations {
     agentCreated: string;
     startChatting: string;
     backToGallery: string;
+  };
+
+  // Connectors
+  connectors: {
+    title: string;
+    description: string;
+    emptyTitle: string;
+    emptyDescription: string;
   };
 
   // Breadcrumb

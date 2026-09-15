@@ -1,4 +1,4 @@
-﻿import {
+import {
   CompassIcon,
   GraduationCapIcon,
   ImageIcon,
@@ -168,6 +168,7 @@ export const zhCN: Translations = {
     recentChats: "最近的对话",
     demoChats: "演示对话",
     agents: "智能体",
+    connectors: "连接器",
   },
 
   // Agents
@@ -212,6 +213,14 @@ export const zhCN: Translations = {
     agentCreated: "智能体已创建！",
     startChatting: "开始对话",
     backToGallery: "返回 Gallery",
+  },
+
+  // Connectors
+  connectors: {
+    title: "连接器",
+    description: "管理邮箱、知识库等外部服务连接器，授权后即可在对话中使用。",
+    emptyTitle: "暂无可用连接器",
+    emptyDescription: "系统中尚未安装任何连接器，请联系管理员。",
   },
 
   // Breadcrumb
