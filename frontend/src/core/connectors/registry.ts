@@ -1,7 +1,8 @@
 "use client";
 
-import { MailIcon } from "lucide-react";
+import { GithubIcon, MailIcon } from "lucide-react";
 
+import { GithubConnectorCard } from "@/components/workspace/settings/github-connector-card";
 import { MailConnectorCard } from "@/components/workspace/settings/mail-connector-card";
 
 /**
@@ -30,5 +31,12 @@ export const CONNECTORS: ConnectorDefinition[] = [
     description: "通过 SMTP 发送邮件。在聊天中输入「发邮件给 xxx」即可自动调用。",
     icon: MailIcon,
     Card: MailConnectorCard,
+  },
+  {
+    id: "github",
+    label: "GitHub 连接器",
+    description: "查询 GitHub 仓库信息、提交历史和 Issue 列表。在聊天中输入「看看 xxx 仓库最近的提交」即可自动调用。",
+    icon: GithubIcon,
+    Card: GithubConnectorCard,
   },
 ];
